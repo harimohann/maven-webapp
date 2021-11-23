@@ -33,6 +33,8 @@
      <name>Internal Releases</name>
      <url>http://192.168.10.10:8090/nexus/content/repositories/snapshots/</url>
   </snapshotRepository>
+</distributionManagement>
+</project>
 post {
   always {
     cleanWs()
@@ -47,5 +49,3 @@ post {
     }
   }
 }
-</distributionManagement>
-</project>
