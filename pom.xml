@@ -33,5 +33,19 @@
      <name>Internal Releases</name>
      <url>http://192.168.10.10:8090/nexus/content/repositories/snapshots/</url>
   </snapshotRepository>
+post {
+  always {
+    cleanWs()
+    dir("${env.WORKSPACE}@tmp") {
+      deleteDir()
+    }
+    dir("${env.WORKSPACE}@script") {
+      deleteDir()
+    }
+    dir("${env.WORKSPACE}@script@tmp") {
+      deleteDir()
+    }
+  }
+}
 </distributionManagement>
 </project>
